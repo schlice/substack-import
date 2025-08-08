@@ -1,0 +1,37 @@
+title: "Substack Import Site"
+description: "Converted blog posts for Substack import"
+timezone: "America/Los_Angeles"
+
+# Tell Jekyll where to find your posts
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+    source: html_posts
+
+# Use kramdown for any Markdown processing (your files are HTML, so minimal impact)
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Feed settings
+feed:
+  path: feed.xml
+  collections:
+    - posts
+
+# Exclude unnecessary stuff from build
+exclude:
+  - _posts/
+  - md2html.py
+  - README.md
+  - .jekyllignore
+
+# Theme (you can change this later)
+theme: minima

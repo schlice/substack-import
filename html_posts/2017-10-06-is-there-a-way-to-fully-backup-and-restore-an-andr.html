@@ -1,0 +1,81 @@
+---
+title: "Is there a way to fully backup and restore an Android phone in one step like on an iPhone? (W/o rooting)"
+date: "2017-10-06"
+tags: ["uncategorized"]
+layout: post
+---
+
+<h2>Answer</h2>
+<div>
+
+{.rendered_qtext}
+
+</div>
+
+<div>
+
+**Content:** []{.rendered_qtext}
+
+**TL;DR: Unless you're flashing a custom ROM onto your phone, you don't
+need to do a full backup.**
+
+There's a lot of answers here. Most are mostly correct.
+
+The correct answer is **without rooting, you cannot fully back up and
+restore an Android phone.**
+
+The question is *what does "fully" mean?* In this context, "fully" means
+backing up the entire "user" space, as well as the entire "system"
+partition. This means you're backing up
+
+- The Android operating system and all of its patches
+- All of the applications (apks) that run on your phone as well as all
+  of their settings
+- All of the "user" space, which includes all of your files, your
+  pictures, your ringtones, your music files, etc.
+
+You can only back up **all** of this with a rooted phone. Some of these
+partitions are not available to the user who does not have root-level
+privileges.
+
+But the question remains: *why?* Why would you want to back up all of
+these things when you can simply restore the originals from the same
+place you got them? If your phone is wiped:
+
+- The Android operating system will be re-installed from your **recovery
+  partition**, so it is not necessary to separately back it up
+- The applications will be restored from the Google Play store (for the
+  APKs) and from your phone manufacturer's backups (for example, Samsung
+  Cloud stores all of your apps' settings), so it is not necessary to
+  separately back them up
+
+Your user files are the only items you will need to back up yourself.
+Any of the tools indicated in the other answers will fully back up the
+user partitions. Your phone manufacturer probably also has tools which
+will do this for free (for example, Samsung offers **Kies**, a software
+package which runs on your computer and allows you to regularly back up
+your phone). In addition, Samsung Cloud will back up your user
+partition. There are other piecemeal solutions which can offer cloud
+backup for portions of your user partition (for example, Google Photos
+offers *unlimited* photo storage).
+
+The only reason you would want to take a "full" backup of your phone
+(OS, apps, and user space) is if you are applying another operating
+system to your phone. For example, if you are flashing CyanogenMod or
+AOSP onto your phone, you probably want to take a full backup of your
+phone first. If you have no idea what CyanogenMod or AOSP are, then you
+really don't need to do a "full" backup of your phone. Oh, and if you
+are flashing CM or AOSP, you're already rooted.
+
+</div>
+
+<div>
+
+
+</div>
+
+<div>
+
+**Content language:** English
+
+</div>

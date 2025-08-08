@@ -1,0 +1,74 @@
+---
+title: "When you do a factory reset to your phone to get rid of malware, and you do a back up first, won\"
+date: "2018-05-16"
+tags: ["uncategorized"]
+layout: post
+---
+
+<h2>Answer</h2>
+<div>
+
+{.rendered_qtext}
+
+</div>
+
+<div>
+
+**Content:** []{.rendered_qtext}
+
+**When you do a factory reset to your phone to get rid of malware, and
+you do a back up first, won\'t you be backing up the malware too?**
+
+The answer, of course, is "it depends." Primarily, it depends on the
+source of the malware. Secondarily, it depends on whether or not you are
+rooted and what kind of wipe/restore you are performing.
+
+For the sake of discussion, I'll assume we're talking about Android,
+because malware is more likely to occur in the Android ecosystem than in
+the Apple ecosystem, especially because Android allows "Unknown Sources"
+(i.e. APK files downloaded off of the Internet) to be used to install
+apps on your device.
+
+The theory revolves around the fact that when you wipe and re-install,
+your Google backup does not contain the APKs (i.e. source files) for the
+applications you are reinstalling. It only contains an index file
+showing all of the apps which were on your phone. During the
+installation process, that list is used to reach back to the Google Play
+repository and re-download the source files for re-installation. If the
+app is not hosted on Google Play, it will not be re-installed
+automatically after wiping and re-loading.
+
+To that end:
+
+- If you downloaded the malware as part of an app from a third-party
+  website (the most likely scenario), then wiping and re-installing all
+  of your apps will clean off the malware. Wiping and re-installing your
+  phone will **NOT** reach out to third-party websites to re-install
+  apps which were not downloaded from the Google Play Store.
+- If the malware was resident in the app *in the Google Play Store*,
+  wiping and re-installing will re-install the malware. This is less
+  likely, but is still a slight possibility.
+- Generally, your app settings (which are saved in your backup) will not
+  contain executable code, so it's unlikely that your backup file on the
+  Google servers will contain malware.
+
+Of course, if you are rooted and you performed a nandroid backup or if
+you used something like Titanium Backup to back up your entire data
+partition (including all apps and settings), then restoring that backup
+would restore the malware right back on to your phone. This, again, is
+only a problem if you are rooted and you used backup software to back up
+your phone. A standard (non-root) wipe and re-install from Google will
+avoid this problem.
+
+</div>
+
+<div>
+
+
+</div>
+
+<div>
+
+**Content language:** English
+
+</div>

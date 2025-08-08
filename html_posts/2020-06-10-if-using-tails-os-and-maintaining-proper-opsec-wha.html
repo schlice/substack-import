@@ -1,0 +1,79 @@
+---
+title: "If using Tails OS and maintaining proper Opsec, what would be the chances of being de-anonymized by the FBI and NSA?"
+date: "2020-06-10"
+tags: ["uncategorized"]
+layout: post
+---
+
+<h2>Answer</h2>
+<div>
+
+{.rendered_qtext}
+
+</div>
+
+<div>
+
+**Content:** []{.rendered_qtext}
+
+**If using Tails OS and maintaining proper Opsec, what would be the
+chances of being de-anonymized by the FBI and NSA?**
+
+TAILS (The Amnesic Incognito Live System) has as its primary purpose
+leaving no trace on the host computer. It also can communicate over TOR
+networks using a TOR Browser. You don't need TAILS to be anonymous
+online. Using the TOR Browser and being careful with what you access is
+all you need for anonymous browsing.
+
+Using the [[TOR
+Browser](https://www.quora.com/_/redirect?sig=fc2a38&url=https://www.torproject.org/download/){.external_link
+rel="noopener nofollow" target="_blank"
+onclick="return Q.openUrl(this);"
+qt-tooltip="torproject.org"}]{.qlink_container} is simple enough.
+Install and go. Watching where you log in to is more critical. For
+example, if you use TOR to log in to your Gmail account, then they at
+least know you logged in to your Gmail account. They may not know from
+where, but they do know you logged in. So the OPSEC you discuss in your
+question is critical. In other words, you're more likely to be
+de-anonymized by the site you visit than you are by having your TOR
+circuit back-traced. At best, they can tell you connected to a TOR entry
+node, but even that packet is encrypted, so what you said and where you
+went from there is still a mystery.
+
+There was talk for a while about the NSA having sleeper nodes in the TOR
+network, but even a sleeper node would still need to decrypt the entire
+packet, and you'd only be able to do that if you had the private keys of
+all three nodes in the circuit. Since you randomly generate a circuit
+(and can do so again at any time), having all three private keys is
+highly unlikely.
+
+As I said at the beginning, the primary purpose of TAILS is to be able
+to use any computer and leave no trace. Indeed, you can do this with
+nearly any version of Linux which has a Live installer, such as Ubuntu.
+What sets TAILS apart is that it has security inbuilt, so it boots into
+a live session, AND uses a TOR circuit by default, AND communicates over
+a TOR Browser. It also cleans memory and ensures that nothing is ever
+communicate to the local hard drive at all. And unless you specifically
+enable it, nothing is written to the USB stick either.
+
+So to answer the question: **If using Tails OS and maintaining proper
+Opsec, what would be the chances of being de-anonymized by the FBI and
+NSA?**
+
+If you did each one of those things perfectly, *virtually zero*. I'm in
+Tech Support and I know better than to assure you that it will never
+happen (remember, nothing is foolproof to the talented fool), but it is
+so unlikely that it is *effectively* zero.
+
+</div>
+
+<div>
+
+
+</div>
+
+<div>
+
+**Content language:** English
+
+</div>

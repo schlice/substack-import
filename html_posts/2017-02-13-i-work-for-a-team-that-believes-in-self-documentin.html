@@ -1,0 +1,52 @@
+---
+title: "I work for a team that believes in self-documenting variable names. It\"
+date: "2017-02-13"
+tags: ["uncategorized"]
+layout: post
+---
+
+<h2>Answer</h2>
+<div>
+
+{.rendered_qtext}
+
+</div>
+
+<div>
+
+**Content:** []{.rendered_qtext}
+
+You can always write a separate text document which describes each
+variable, what it is used for, what calls it, and what it calls. That
+means that every time you create a variable, you need to simultaneously
+add the variable to the document. This avoids the overhead in the code,
+but is more time-consuming for the programmer. I would suggest either a
+spreadsheet or a table in a word processor document.
+
+If you're programming using the gdb editor, you can type **info
+variables** to get a list of all variables in the code. You can use that
+as your starting point. You can also type **info locals** to list local
+variables of the current stack frame, including static variables in that
+function. Finally, you can type **info args** to list arguments of the
+current stack frame. So depending on your editor, you may be able to
+list out all of the variables in your code, and you can use that to
+start your variable document, and perhaps to keep it updated.
+
+For code that may have to be maintained at some point in the future, we
+like to add comments directly into the code because it allows for ease
+of future maintenance. The problem with a standalone code instruction
+document is that it could be lost or misplaced, and then the code
+becomes orders-of-magnitude harder to maintain in the future.
+
+</div>
+
+<div>
+
+
+</div>
+
+<div>
+
+**Content language:** English
+
+</div>

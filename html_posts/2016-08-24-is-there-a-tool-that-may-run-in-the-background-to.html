@@ -1,0 +1,43 @@
+---
+title: "Is there a tool that may run in the background to automatically take a screenshot when something on screen changes?"
+date: "2016-08-24"
+tags: ["uncategorized"]
+layout: post
+---
+
+<h2>Answer</h2>
+<div>
+
+{.rendered_qtext}
+
+</div>
+
+<div>
+
+**Content:** []{.rendered_qtext}
+
+Let's assume you're talking about Windows.
+
+Your best bet is to build your own tool using an automation helper like
+[[AutoHotkey](https://www.quora.com/_/redirect?sig=190a0b&url=http://www.autohotkey.com){.external_link
+rel="noopener nofollow" target="_blank"
+onclick="return Q.openUrl(this);"
+qt-tooltip="autohotkey.com"}]{.qlink_container}. In AHK, the script
+would watch a window for changes, and then take a screenshot. You could
+take the visible contents of the window and save them in a variable
+using `WinGetText`{.prettyprint .inline}, then do it again at a set
+interval (say, every 5 seconds). If the two variables don't match, take
+a screenshot by sending the `PrintScreen`{.prettyprint .inline} key.
+
+</div>
+
+<div>
+
+
+</div>
+
+<div>
+
+**Content language:** English
+
+</div>
