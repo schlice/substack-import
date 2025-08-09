@@ -17,7 +17,7 @@ plugins:
 feed:
   collections:
     - html_posts
-  limit: 1000  # smaller = faster builds
+  posts limit: 1500  # smaller = faster builds
 
 # Markdown processor
 markdown: kramdown
