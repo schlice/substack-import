@@ -15,10 +15,9 @@ plugins:
 
 # Feed configuration
 feed:
-  path: feed.xml
   collections:
     - html_posts
-  limit: 500  # smaller = faster builds
+  limit: 1000  # smaller = faster builds
 
 # Markdown processor
 markdown: kramdown
