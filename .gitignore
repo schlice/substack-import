@@ -1,0 +1,7 @@
+_posts/
+_html_posts/
+fix_frontmatter.py
+fix_frontmatter2.py
+html_posts_by_year/
+split_posts_by_year.py
+year_deploy.py
