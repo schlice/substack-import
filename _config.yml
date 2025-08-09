@@ -1,13 +1,13 @@
 title: My GitHub Pages Site
 description: "Temporary site for Substack import"
-baseurl: "" # leave empty if site is at the root (not a subdirectory)
+baseurl: "" # leave empty if site is at root
 url: "https://<yourusername>.github.io/<yourrepo>" # change to your repo URL
 
+# Define custom collection for posts
 collections:
-  posts:
+  html_posts:
     output: true
     permalink: /:year/:month/:day/:title/
-    source: html_posts
 
 # Plugins
 plugins:
@@ -17,22 +17,22 @@ plugins:
 feed:
   path: feed.xml
   collections:
-    - posts
-  limit: 500  # Only include most recent 500 posts (makes builds faster)
+    - html_posts
+  limit: 500  # smaller = faster builds
 
-# Markdown settings
+# Markdown processor
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 
-# Theme (none; we're using raw HTML index)
+# No theme (we’re using a raw HTML index)
 theme: null
 
-# Exclusions — files/folders Jekyll should not process
+# Folders/files Jekyll should not process
 exclude:
   - _posts
-  - html_posts_backups
+  - _html_posts_backups
   - html_posts_by_year
   - fix_frontmatter.py
   - fix_frontmatter2.py

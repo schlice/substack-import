@@ -38,8 +38,8 @@ layout: none
     <p><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
     <hr>
 
-    {% if site.posts and site.posts.size > 0 %}
-        {% for post in site.posts %}
+    {% if site.html_posts and site.html_posts.size > 0 %}
+        {% for post in site.html_posts %}
             <div class="post">
                 <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
                 <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
