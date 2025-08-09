@@ -1,21 +1,53 @@
 ---
-layout: default
-title: Home
+layout: none
 ---
 
-<h1>{{ site.title }}</h1>
-<p>{{ site.description }}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.title | default: "My GitHub Pages Site" }}</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            line-height: 1.5;
+        }
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        .post {
+            margin-bottom: 1.5rem;
+        }
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        a {
+            text-decoration: none;
+            color: #0074d9;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ site.title | default: "My GitHub Pages Site" }}</h1>
+    <p><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
+    <hr>
 
-<hr>
+    {% if site.posts and site.posts.size > 0 %}
+        {% for post in site.posts %}
+            <div class="post">
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No posts found.</p>
+    {% endif %}
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-      <small> — {{ post.date | date: "%B %d, %Y" }}</small>
-      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-    </li>
-  {% endfor %}
-</ul>
+</body>
+</html>
