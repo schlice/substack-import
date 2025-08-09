@@ -1,7 +1,7 @@
 title: My GitHub Pages Site
 description: "Temporary site for Substack import"
 baseurl: "" # leave empty if site is at root
-url: "https://<yourusername>.github.io/<yourrepo>" # change to your repo URL
+url: "https://schlice.github.io/substack-import" # change to your repo URL
 
 # Define custom collection for posts
 collections:
