@@ -1,5 +1,6 @@
 _posts/
 _html_posts/
+html_posts_backups/
 fix_frontmatter.py
 fix_frontmatter2.py
 html_posts_by_year/
