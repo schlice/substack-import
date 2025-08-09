@@ -1,6 +1,7 @@
-title: "Substack Import Site"
-description: "Converted blog posts for Substack import"
-timezone: "America/New_York"
+title: My GitHub Pages Site
+description: "Temporary site for Substack import"
+baseurl: "" # leave empty if site is at the root (not a subdirectory)
+url: "https://<yourusername>.github.io/<yourrepo>" # change to your repo URL
 
 collections:
   posts:
@@ -8,24 +9,32 @@ collections:
     permalink: /:year/:month/:day/:title/
     source: html_posts
 
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Feed configuration
+feed:
+  path: feed.xml
+  collections:
+    - posts
+  limit: 500  # Only include most recent 500 posts (makes builds faster)
+
+# Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Theme (none; we're using raw HTML index)
+theme: null
 
-feed:
-  path: feed.xml
-  collections:
-    - posts
-
+# Exclusions — files/folders Jekyll should not process
 exclude:
-  - "_posts/"
-  - "md2html.py"
-  - "README.md"
-  - ".jekyllignore"
-
-theme: minima
+  - _posts
+  - html_posts_backups
+  - html_posts_by_year
+  - fix_frontmatter.py
+  - fix_frontmatter2.py
+  - split_posts_by_year.py
+  - year_deploy.py
