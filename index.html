@@ -6,48 +6,41 @@ layout: none
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ site.title | default: "My GitHub Pages Site" }}</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 800px;
-            margin: 2rem auto;
-            line-height: 1.5;
-        }
-        h1 {
-            margin-bottom: 0.5rem;
-        }
-        .post {
-            margin-bottom: 1.5rem;
-        }
-        .date {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        a {
-            text-decoration: none;
-            color: #0074d9;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>{{ site.title | default: "Debug Site" }}</title>
 </head>
 <body>
-    <h1>{{ site.title | default: "My GitHub Pages Site" }}</h1>
-    <p><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
-    <hr>
+    <h1>Debug Info</h1>
 
-    {% if site.html_posts and site.html_posts.size > 0 %}
+    <h2>Collection count</h2>
+    <p>site.html_posts.size = {{ site.html_posts | size }}</p>
+
+    <h2>All html_posts objects</h2>
+    <ul>
         {% for post in site.html_posts %}
-            <div class="post">
-                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
-            </div>
+            <li>
+                <strong>Title:</strong> {{ post.title }}<br>
+                <strong>URL:</strong> {{ post.url }}<br>
+                <strong>Date:</strong> {{ post.date }}<br>
+                <strong>Path:</strong> {{ post.path }}<br>
+                <strong>Content preview:</strong> {{ post.content | truncate: 100 }}
+            </li>
         {% endfor %}
-    {% else %}
-        <p>No posts found.</p>
-    {% endif %}
+    </ul>
 
+    <h2>Collections list</h2>
+    <ul>
+        {% for col in site.collections %}
+            <li>{{ col.label }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Site static files</h2>
+    <ul>
+        {% for file in site.static_files %}
+            {% if file.path contains "_html_posts" %}
+                <li>{{ file.path }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 </html>
